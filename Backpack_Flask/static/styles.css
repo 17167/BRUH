@@ -1,0 +1,29 @@
+body {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    background-image: url(pictures/backdrop.jpg);
+    background-size: cover;
+}
+
+h1 {
+    color: white;
+}
+
+table {
+    background-color: whitesmoke;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+    td, th {
+        border: 10px double red;
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #ffffff;
+    }
