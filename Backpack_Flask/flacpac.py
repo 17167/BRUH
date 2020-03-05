@@ -3,13 +3,13 @@ from flask import Flask, flash, render_template, request, redirect, g
 import sqlite3, os
 from werkzeug.utils import secure_filename
 
-UPLOAD_FOLDER = '/path/to/the/uploads'
+UPLOAD_FOLDER = '/Backpack_Flask/static/pictures'
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-app.secret_key = 'AWUBFAUIWBFAWUFAFNASA/.FCAW'
+app.secret_key = 'AWUBFAUIWBFAWUFAFNASAFCAW'
 
 DATABASE = 'FlaskPack.db'
 
@@ -47,7 +47,7 @@ def add():
         new_name = request.form["item_name"]
         new_description = request.form["item_description"]
         sql = "INSERT INTO flaskpac(name,description,picture) VALUES (?,?,?)"
-        cursor.execute(sql,(new_name,new_description,new_picture))
+        cursor.execute(sql,(new_name,new_description,new_picture,))
         get_db().commit()
 
         if 'file' not in request.files:
@@ -62,7 +62,7 @@ def add():
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return redirect(url_for('uploaded_file', ~filename=filename))
+            return redirect(url_for('uploaded_file', filename=filename))
     return redirect('/')
 
 @app.route('/delete', methods=["GET","POST"])

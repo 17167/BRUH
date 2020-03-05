@@ -3,8 +3,8 @@ body {
     margin-bottom: 100px;
     margin-right: 150px;
     margin-left: 80px;
-    background-image: url(pictures/backdrop.jpg);
-    background-size: cover;
+    background-image: url(pictures/drakeandjosh.gif);
+    background-size: 20px;
 }
 
 h1 {
@@ -13,7 +13,7 @@ h1 {
 
 table {
     background-color: whitesmoke;
-    font-family: arial, sans-serif;
+    font-family: initial;
     border-collapse: collapse;
     width: 100%;
     }
