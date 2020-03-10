@@ -2,13 +2,13 @@ body {
     margin-top: 100px;
     margin-bottom: 100px;
     margin-right: 150px;
-    margin-left: 80px;
-    background-image: url(pictures/salad.jpg);
+    margin-left: 150px;
+    background-image: url(pictures/backdrop.jpg);
     background-size: cover;
 }
 
 h1 {
-    color: red;
+    color: white;
 }
 
 table {
@@ -20,7 +20,7 @@ table {
     }
 
     td, th {
-        border: 5px solid lime;
+        border: 5px solid black;
         text-align: center;
         padding: 8px;
         animation-name: ohboy;
