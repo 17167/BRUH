@@ -18,6 +18,7 @@ table {
     border-collapse: collapse;
     width: 100%;
     background-size: 10px;
+    word-wrap: break-word;
     }
 
     td, th {
@@ -35,6 +36,7 @@ table {
         animation-duration: 5s;
         animation-iteration-count: infinite;
         padding: 80%;
+        word-wrap: break-word;
     }
 
     tr:nth-child(odd) {
@@ -42,6 +44,7 @@ table {
         animation-duration: 5s;
         animation-iteration-count: infinite;
         position: relative;
+        word-wrap: break-word;
     }
 
 

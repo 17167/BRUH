@@ -1,5 +1,5 @@
 #21/2/2020 Jayden L Backpack with Flask
-from flask import Flask, flash, render_template, request, redirect, g
+from flask import Flask, flash, render_template, request, redirect, g, url_for
 import sqlite3, os
 from werkzeug.utils import secure_filename
 
@@ -32,6 +32,7 @@ def close_connection(exception):
 
 @app.route('/')
 def home():
+    #fetch all items from database 
     cursor = get_db().cursor()
     sql = "SELECT * FROM flaskpac"
     cursor.execute(sql)
