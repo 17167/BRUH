@@ -3,27 +3,65 @@ body {
     margin-bottom: 100px;
     margin-right: 150px;
     margin-left: 80px;
-    background-image: url(pictures/drakeandjosh.gif);
-    background-size: 20px;
+    background-image: url(pictures/salad.jpg);
+    background-size: cover;
 }
 
 h1 {
-    color: white;
+    color: red;
 }
 
 table {
-    background-color: whitesmoke;
+    background-image: url(pictures/monkas.gif);
     font-family: initial;
     border-collapse: collapse;
     width: 100%;
+    background-size: 10px;
     }
 
     td, th {
-        border: 10px double red;
+        border: 5px solid lime;
         text-align: center;
         padding: 8px;
+        animation-name: ohboy;
+        animation-duration: 0s;
+        animation-iteration-count: infinite;
+        position: relative;
     }
 
     tr:nth-child(even) {
-        background-color: #ffffff;
+        animation-name: example;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        padding: 80%;
     }
+
+    tr:nth-child(odd) {
+        animation-name: bruh;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        position: relative;
+    }
+
+
+@keyframes example {
+    0% {background-color: blueviolet;}
+    25% {background-color: purple;}
+    50% {background-color: magenta;}
+    75% {background-color: indigo;}
+    100% {background-color: blueviolet;}
+}
+@keyframes bruh {
+    0% {background-color: blue;}
+    25% {background-color: skyblue;}
+    50% {background-color: aqua;}
+    75% {background-color: teal;}
+    100% {background-color: blue;}
+}
+@keyframes ohboy {
+    0% {background-image: url(pictures/monkas.gif); left: 0px; top: 0px;}
+    25% {background-image: url(pictures/monkas.gif); left: 1000px; top: 0px;}
+    50% {background-image: url(pictures/monkas.gif); left: 1000px; top: 1000px;}
+    75% {background-image: url(pictures/monkas.gif); left: 0px; top: 1000px;}
+    100% {background-image: url(pictures/monkas.gif); left: 0px; top: 0px;}
+}
